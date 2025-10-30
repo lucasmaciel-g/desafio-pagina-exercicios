@@ -1,79 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desafio Exercícios</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body>
-  <header>
-    <div>
-      <h1>Lista de exercícios</h1>
-      <h2>Fundamentos De Software e Gerenciamento De Projetos</h2>
-    </div>
-    <div>
-      <button><img src="./img/text-icon.svg" alt=""></button>
-      <button><img src="./img/target-icon.svg" alt=""></button>
-      <button><img src="./img/circle-half-icon.svg" alt=""></button>
-    </div>
-    <button>
-      <img src="" alt="">
-      <span>Sair e finalizar depois</span>
-    </button>
-  </header>
-  <main>
-    <section>
-      <div">
-        <span>1</span>
-        <span>Marcar para revisão</span>
-      </div>
-      <div>
-        <p>Essa é a primeira etapa do processo de desenvolvimento de software. Usa-se diferentes técnicas, tais como entrevistas, questionários na busca de uma comunicação mais efetiva com o usuário. Marque a alternativa que indica essa etapa.
-        </p>
-      </div>
-      <ul>
-        <li class="alternativa">
-          <span>A</span>
-          <p>Levantamento de Requisitos</p>
-        </li>
-        <li class="alternativa">
-          <span>B</span>
-          <p>Análise</p>
-        </li>
-        <li class="alternativa">
-          <span>C</span>
-          <p>Implementação</p>
-        </li>
-        <li class="alternativa">
-          <span>D</span>
-          <p>Testes</p>
-        </li>
-        <li class="alternativa">
-          <span>E</span>
-          <p>Implantação</p>
-        </li>
-      </ul>
-    </section>
-    <aside>
-      <div>
-        <p>Questão <span></span> de 8</p>
-        <div>
-          <ul>
-            <li><span>1</span></li>
-            <li><span>2</span></li>
-            <li><span>3</span></li>
-            <li><span>4</span></li>
-            <li><span>5</span></li>
-            <li><span>6</span></li>
-            <li><span>7</span></li>
-            <li><span>8</span></li>
-          </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Exercícios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#e5e7eb] text-gray-700 font-[Inter] h-[2000px]">
+    <!-- Top header -->
+    <header class="bg-white border-b sticky top-0 z-10 shadow-md">
+      <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-11">
+          <h1 class="font-[Montserrat] font-[600] text-2xl leading-[29px] text-black">Lista de exercícios</h1>
+          <h2 class="text-[rgb(66, 66, 66)] text-base leading-[150%]">
+            Fundamentos De Software e Gerenciamento De Projetos
+          </h2>
         </div>
-        <span>Em branco (<span></span>)</span>
+        <div class="flex items-center gap-5">
+          <button class="p-2 rounded hover:bg-gray-100">
+            <img src="./img/text-icon.svg" alt="text" class="" />
+          </button>
+          <button class="p-2 rounded hover:bg-gray-100">
+            <img src="./img/target-icon.svg" alt="target" class="" />
+          </button>
+          <button class="p-2 rounded hover:bg-gray-100">
+            <img src="./img/circle-half-icon.svg" alt="theme" class="" />
+          </button>
+          <button class="ml-4 text-sm text-blue-600 flex items-center gap-2">
+            <img src="./img/sign-out-icon.svg" alt="" />
+            Sair e finalizar depois
+          </button>
+        </div>
       </div>
-      <button>Finalizar exercícios</button>
-    </aside>
-  </main>
-</body>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Main content (cards) -->
+        <div class="md:col-span-2">
+          <!-- Question card -->
+          <section class="bg-white rounded-lg shadow p-6 mb-6">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 bg-gray-100 rounded flex items-center justify-center text-sm font-medium"
+                >
+                  1
+                </div>
+                <button class="px-3 py-1 text-sm bg-white border rounded-full">
+                  Marcar para revisão
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-4 text-sm leading-relaxed text-gray-600">
+              <p>
+                Essa é a primeira etapa do processo de desenvolvimento de
+                software. Usa-se diferentes técnicas, tais como entrevistas,
+                questionários na busca de uma comunicação mais efetiva com o
+                usuário. Marque a alternativa que indica essa etapa.
+              </p>
+            </div>
+
+            <ul class="mt-6 space-y-3">
+              <li
+                class="border rounded-lg p-4 bg-white hover:shadow-sm flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center"
+                  >A</span
+                >
+                <p class="text-sm">Levantamento de Requisitos</p>
+              </li>
+              <li
+                class="border rounded-lg p-4 bg-white hover:shadow-sm flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center"
+                  >B</span
+                >
+                <p class="text-sm">Análise</p>
+              </li>
+              <li
+                class="border rounded-lg p-4 bg-white hover:shadow-sm flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center"
+                  >C</span
+                >
+                <p class="text-sm">Implementação</p>
+              </li>
+              <li
+                class="border rounded-lg p-4 bg-white hover:shadow-sm flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center"
+                  >D</span
+                >
+                <p class="text-sm">Testes</p>
+              </li>
+              <li
+                class="border rounded-lg p-4 bg-white hover:shadow-sm flex items-center gap-4"
+              >
+                <span
+                  class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center"
+                  >E</span
+                >
+                <p class="text-sm">Implantação</p>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Additional example card to match screenshot spacing -->
+          <section class="bg-white rounded-lg shadow p-6">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-8 h-8 bg-gray-100 rounded flex items-center justify-center text-sm"
+              >
+                2
+              </div>
+              <button class="px-3 py-1 text-sm bg-white border rounded-full">
+                Marcar para revisão
+              </button>
+            </div>
+            <div class="mt-4 text-sm text-gray-600">
+              <p>
+                (Texto de exemplo para a segunda questão — mantenha estrutura
+                para replicar o layout.)
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Nav questoes -->
+        <aside class="md:col-span-1">
+          <div class="bg-white rounded-lg shadow p-4 mb-4">
+            <p class="text-sm text-gray-600">
+              Questão <span class="font-semibold">1</span> de
+              <span class="font-semibold">8</span>
+            </p>
+            <div class="mt-4">
+              <ul class="grid grid-cols-4 gap-2">
+                <li>
+                  <button class="w-10 h-10 bg-gray-100 rounded">1</button>
+                </li>
+                <li>
+                  <button class="w-10 h-10 bg-gray-100 rounded">2</button>
+                </li>
+                <li>
+                  <button class="w-10 h-10 bg-gray-100 rounded">3</button>
+                </li>
+                <li>
+                  <button class="w-10 h-10 bg-gray-100 rounded">4</button>
+                </li>
+                <li>
+                  <button class="w-10 h-10 bg-gray-100 rounded">5</button>
+                </li>
+                <li>
+                  <button class="w-10 h-10 bg-gray-100 rounded">6</button>
+                </li>
+                <li>
+                  <button class="w-10 h-10 bg-gray-100 rounded">7</button>
+                </li>
+                <li>
+                  <button class="w-10 h-10 bg-gray-100 rounded">8</button>
+                </li>
+              </ul>
+            </div>
+            <p class="mt-3 text-sm text-gray-500">
+              Em branco (<span class="font-medium">8</span>)
+            </p>
+          </div>
+          <button class="w-full bg-gray-200 text-gray-500 py-2 rounded">
+            Finalizar exercícios
+          </button>
+        </aside>
+      </div>
+    </main>
+  </body>
 </html>
