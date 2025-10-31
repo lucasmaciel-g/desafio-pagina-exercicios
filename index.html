@@ -13,9 +13,9 @@
     />
   </head>
   <body class="bg-[#e5e7eb] text-gray-700 font-[Inter] h-[2000px]">
-    <!-- Top header -->
-    <header class="bg-white border-b sticky top-0 z-10 shadow-md">
-      <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+    <!-- Header -->
+    <header class="bg-white border-b sticky top-0 z-10 shadow-md flex justify-center py-2 px-16">
+      <div class="flex items-center justify-between w-[1200px] h-12">
         <div class="flex items-center gap-11">
           <h1 class="font-[Montserrat] font-[600] text-2xl leading-[29px] text-black">Lista de exercícios</h1>
           <h2 class="text-[rgb(66, 66, 66)] text-base leading-[150%]">
@@ -23,16 +23,16 @@
           </h2>
         </div>
         <div class="flex items-center gap-5">
-          <button class="p-2 rounded hover:bg-gray-100">
+          <button class="p-3 h-12 w-12 rounded-[50%] border border-transparent hover:bg-gray-100 transition duration-200">
             <img src="./img/text-icon.svg" alt="text" class="" />
           </button>
-          <button class="p-2 rounded hover:bg-gray-100">
+          <button class="p-3 h-12 w-12 rounded-[50%] border border-transparent hover:bg-gray-100 transition duration-200">
             <img src="./img/target-icon.svg" alt="target" class="" />
           </button>
-          <button class="p-2 rounded hover:bg-gray-100">
+          <button class="p-3 h-12 w-12 rounded-[50%] border border-transparent hover:bg-gray-100 transition duration-200">
             <img src="./img/circle-half-icon.svg" alt="theme" class="" />
           </button>
-          <button class="ml-4 text-sm text-blue-600 flex items-center gap-2">
+          <button class="text-base font-[500] text-[#144bc8] flex items-center gap-2 rounded-lg border-2 border-transparent h-12 px-6 hover:bg-[#C1D5FF] hover:border-[#C1D5FF] transition duration-200">
             <img src="./img/sign-out-icon.svg" alt="" />
             Sair e finalizar depois
           </button>
@@ -42,9 +42,9 @@
 
     <main class="max-w-6xl mx-auto px-6 py-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Main content (cards) -->
+        <!-- Container questões -->
         <div class="md:col-span-2">
-          <!-- Question card -->
+          <!-- Cards Questões -->
           <section class="bg-white rounded-lg shadow p-6 mb-6">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-3">
