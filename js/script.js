@@ -1,3 +1,5 @@
+const quantidadeQuestoesRespondidas = document.getElementsByClassName('respondida').length;
+
 // Aumenta e diminui o tamanho da fonte
 function aumentaFonte() {
   const btnAumentaFonte = document.querySelector('.aumenta-fonte');
@@ -7,8 +9,33 @@ function aumentaFonte() {
     containerQuestoes.classList.toggle('text-[150%]');
   });
 }
-
 aumentaFonte();
+
+function escondeRespondidas() {
+  const containerQuestoesRespondidas = document.querySelector('.container-questoes-respondidas');
+  if (quantidadeQuestoesRespondidas === 0) {
+    containerQuestoesRespondidas.classList.add('hidden');
+  } else {
+    containerQuestoesRespondidas.classList.remove('hidden');
+  }
+}
+escondeRespondidas();
+
+
+function questoesRespondidas() {
+  const campoQuestoesRespondidas = document.querySelector('.campo-questoes-respondidas');
+  campoQuestoesRespondidas.innerText = quantidadeQuestoesRespondidas;
+  
+}
+
+function questoesEmBranco() {
+  const campoQuestoesEmBranco = document.querySelector('.campo-questoes-em-branco');
+  const totalQuestoes = document.querySelectorAll('.questao').length;
+  campoQuestoesEmBranco.innerText = totalQuestoes - quantidadeQuestoesRespondidas;
+}
+questoesEmBranco();
+
+
 
 // Marca a alternativa selecionada
 function marcaAlternativa () {
@@ -64,13 +91,20 @@ function marcaAlternativa () {
       if (linkNoAside) {
         linkNoAside.classList.remove('bg-[#c2d4ff]', 'border-[#144bc8]');
       }
+      
     }
+    questoesRespondidas();
+    questoesEmBranco();
+
+    escondeRespondidas();
+
   }
   
   alternativa.forEach((item) => {
     item.addEventListener('click', () => selecionarAlternativa(item));
   });
 }
+
 marcaAlternativa();
 
 
@@ -128,3 +162,4 @@ function totalQuestoes() {
   campoTotalQuestoes.innerText = totalQuestoes;
 }
 totalQuestoes();
+
