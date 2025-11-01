@@ -41,3 +41,5 @@ function marcaAlternativa () {
 }
 
 marcaAlternativa();
+
+// Navegação entre questões
