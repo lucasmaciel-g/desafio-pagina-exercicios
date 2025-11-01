@@ -15,16 +15,16 @@
   <body class="bg-[#f5f5f5] text-gray-700 font-[Inter] h-[2000px]">
     <!-- Header -->
     <header class="bg-white border-b sticky top-0 z-10 shadow-[0px_4px_8px_rgba(0,0,0,0.25)] flex justify-center py-2 px-16">
-      <div class="flex items-center justify-between w-[1200px] h-12">
+      <div class="flex items-center justify-between w-[1200px]">
         <div class="flex items-center gap-6">
           <h1 class="font-[Montserrat] font-[600] text-2xl leading-[29px] text-black">Lista de exercícios</h1>
           <div class="h-12 w-[2px] opacity-60 bg-[#e0e0e0]"></div>
-          <h2 class="text-[#424242] text-base leading-[150%]">
+          <h2 class="text-[#424242] leading-[150%]">
             Fundamentos De Software e Gerenciamento De Projetos
           </h2>
         </div>
         <div class="flex items-center gap-5">
-          <button class="p-3 h-12 w-12 rounded-[50%] border border-transparent hover:bg-gray-100 transition duration-200">
+          <button class="aumenta-fonte p-3 h-12 w-12 rounded-[50%] border border-transparent hover:bg-gray-100 transition duration-200">
             <img src="./img/text-icon.svg" alt="text" class="" />
           </button>
           <button class="p-3 h-12 w-12 rounded-[50%] border border-transparent hover:bg-gray-100 transition duration-200">
@@ -44,9 +44,9 @@
     <main class="px-16 pt-8">
       <div class="mx-auto flex justify-between gap-6 max-w-[1200px]">
         <!-- Container questões -->
-        <div class="md:max-w-[894px]">
+        <div class="container-questoes md:max-w-[894px]">
           <!-- Cards Questões -->
-          <section class="bg-white rounded-lg shadow-[0px_4px_8px_0px_rgba(0,0,0,0.25)] p-6 mb-8">
+          <section class="questao bg-white rounded-lg shadow-[0px_4px_8px_0px_rgba(0,0,0,0.25)] p-6 mb-8">
               <div class="flex justify-between items-center gap-3 pb-6">
                 <div
                   class="w-8 h-8 bg-[#f5f5f5] rounded-lg border-[1px] border-[#e0e0e0] flex items-center justify-center text-sm font-medium"
@@ -67,49 +67,49 @@
               <p>Marque a alternativa que indica essa etapa.</p>
             </div>
             <button
-              class="group border rounded-lg leading-[150%] text-[#121212] opacity-70 w-full mb-4 p-3 bg-white hover:border-gray-800 hover:bg-gray-100 flex items-center gap-4"
+              class="alternativa group border rounded-lg leading-[150%] text-[#121212] w-full mb-4 p-3 bg-white hover:border-gray-800 hover:bg-gray-100 flex items-center gap-4"
             >
               <span
-                class="border-[1px] border-[#e0e0e0] w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:border-gray-800 group-hover:bg-gray-300"
+                class="border-[1px] text-sm leading-[19px] border-[#e0e0e0] w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:border-gray-800 group-hover:bg-gray-300"
                 >A</span
               >
-              <p>Levantamento de Requisitos</p>
+              <p class="opacity-80">Levantamento de Requisitos</p>
             </button>
             <button
-              class="group border rounded-lg leading-[150%] text-[#121212] opacity-70 w-full mb-4 p-3 bg-white flex hover:border-gray-800 hover:bg-gray-100 items-center gap-4"
+              class="alternativa group border rounded-lg leading-[150%] text-[#121212] w-full mb-4 p-3 bg-white flex hover:border-gray-800 hover:bg-gray-100 items-center gap-4"
             >
               <span
-                class="border-[1px] border-[#e0e0e0] w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:border-gray-800 group-hover:bg-gray-300"
+                class="border-[1px] text-sm leading-[19px] border-[#e0e0e0] w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:border-gray-800 group-hover:bg-gray-300"
                 >B</span
               >
-              <p>Análise</p>
+              <p class="opacity-80">Análise</p>
           </button>
             <button
-              class="group border rounded-lg leading-[150%] text-[#121212] opacity-70 w-full mb-4 p-3 bg-white flex items-center gap-4 hover:border-gray-800 hover:bg-gray-100"
+              class="alternativa group border rounded-lg leading-[150%] text-[#121212] w-full mb-4 p-3 bg-white flex items-center gap-4 hover:border-gray-800 hover:bg-gray-100"
             >
               <span
-                class="border-[1px] border-[#e0e0e0] w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:border-gray-800 group-hover:bg-gray-300"
+                class="border-[1px] text-sm leading-[19px] border-[#e0e0e0] w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:border-gray-800 group-hover:bg-gray-300"
                 >C</span
               >
-              <p>Implementação</p>
+              <p class="opacity-80">Implementação</p>
             </li>
             <button
-              class="group border rounded-lg leading-[150%] text-[#121212] opacity-70 w-full mb-4 p-3 bg-white flex items-center gap-4 hover:border-gray-800 hover:bg-gray-100"
+              class="alternativa group border rounded-lg leading-[150%] text-[#121212] w-full mb-4 p-3 bg-white flex items-center gap-4 hover:border-gray-800 hover:bg-gray-100"
             >
               <span
-                class="border-[1px] border-[#e0e0e0] w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:border-gray-800 group-hover:bg-gray-300"
+                class="border-[1px] text-sm leading-[19px] border-[#e0e0e0] w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:border-gray-800 group-hover:bg-gray-300"
                 >D</span
               >
-              <p>Testes</p>
+              <p class="opacity-80">Testes</p>
             </button>
             <button
-              class="group border rounded-lg leading-[150%] text-[#121212] opacity-70 w-full p-3 bg-white flex items-center gap-4 hover:border-gray-800 hover:bg-gray-100"
+              class="alternativa group border rounded-lg leading-[150%] text-[#121212] w-full p-3 bg-white flex items-center gap-4 hover:border-gray-800 hover:bg-gray-100"
             >
               <span
-                class="border-[1px] border-[#e0e0e0] w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:border-gray-800 group-hover:bg-gray-300"
+                class="border-[1px] text-sm leading-[19px] border-[#e0e0e0] w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center group-hover:border-gray-800 group-hover:bg-gray-300"
                 >E</span
               >
-              <p>Implantação</p>
+              <p class="opacity-80">Implantação</p>
             </button>
           </section>
         </div>
@@ -170,7 +170,7 @@
             </div>
             <div class="flex flex-col gap-4">
               <div class="h-[1px] bg-[#e0e0e0]"></div>
-              <button disabled class="w-full bg-[#e0e0e0] opacity-40 text-[#121212] py-2 rounded-lg h-12 px-6">
+              <button disabled class="w-full bg-[#e0e0e0] opacity-40 text-[#121212] py-2 rounded-lg">
                 Finalizar exercícios
               </button>
             </div>
@@ -178,5 +178,6 @@
         </aside>
       </div>
     </main>
+    <script src="./js/script.js"></script>
   </body>
 </html>
