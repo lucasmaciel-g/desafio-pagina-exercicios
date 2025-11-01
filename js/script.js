@@ -16,27 +16,28 @@ aumentaFonte();
 function marcaAlternativa () {
   const alternativa = document.querySelectorAll('.alternativa');
   
-  function selecionarAlternativa(indexClicado) {
+  function selecionarAlternativa(alternativaClicada) {
 
-    const alternativaSelecionada = alternativa[indexClicado];
-    const verificaSelecionada = alternativaSelecionada.classList.contains('bg-[#c2d4ff]');
+    const verificaSelecionada = alternativaClicada.classList.contains('bg-[#c2d4ff]');
+    const questaoPai = alternativaClicada.closest('.questao');
+    const alternativasDestaQuestao = questaoPai.querySelectorAll('.alternativa');
     
-    alternativa.forEach((item) => {
+    alternativasDestaQuestao.forEach((item) => {
       item.classList.remove('bg-[#c2d4ff]', 'border-2', 'border-[#144bc8]');
       item.classList.add('group', 'hover:border-gray-800', 'hover:bg-gray-100', 'opacity-80');
       item.firstElementChild.classList.add('bg-gray-100', 'border-[#e0e0e0]');
       item.firstElementChild.classList.remove('bg-[#144bc8]', 'text-white', 'border-[#144bc8]');
     });
     if (!verificaSelecionada) {
-      alternativaSelecionada.classList.remove('group', 'hover:border-gray-800', 'hover:bg-gray-100', 'opacity-80');
-      alternativaSelecionada.classList.add('bg-[#c2d4ff]', 'border-2', 'border-[#144bc8]');
-      alternativaSelecionada.firstElementChild.classList.remove('bg-gray-100', 'border-[#e0e0e0]');
-      alternativaSelecionada.firstElementChild.classList.add('bg-[#144bc8]', 'text-white', 'border-[#144bc8]');
+      alternativaClicada.classList.remove('group', 'hover:border-gray-800', 'hover:bg-gray-100', 'opacity-80');
+      alternativaClicada.classList.add('bg-[#c2d4ff]', 'border-2', 'border-[#144bc8]');
+      alternativaClicada.firstElementChild.classList.remove('bg-gray-100', 'border-[#e0e0e0]');
+      alternativaClicada.firstElementChild.classList.add('bg-[#144bc8]', 'text-white', 'border-[#144bc8]');
     }
   }
   
-  alternativa.forEach((item, index) => {
-    item.addEventListener('click', () => selecionarAlternativa(index));
+  alternativa.forEach((item) => {
+    item.addEventListener('click', () => selecionarAlternativa(item));
   });
 }
 
