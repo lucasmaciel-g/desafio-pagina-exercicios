@@ -62,3 +62,25 @@ function navegaQuestoes() {
   });
 }
 navegaQuestoes();
+
+// Marcação da questão atual no menu lateral
+function marcaQuestaoAtual() {
+  const secoesQuestoes = document.querySelectorAll('.questao');
+  const linksMenuLateral = document.querySelectorAll('a[href^="#"]');
+  secoesQuestoes.forEach((secao, index) => {
+    const topoSecao = secao.getBoundingClientRect().top;
+    const fundoSecao = secao.getBoundingClientRect().bottom;
+
+    const secaoVisivel = (topoSecao - 100) < 0 && (fundoSecao - 100) > 0;
+    if (secaoVisivel) {
+      linksMenuLateral[index].classList.remove('border-[1px]', 'border-[#e0e0e0]');
+      linksMenuLateral[index].classList.add('border-2', 'border-[#121212]');
+    } else {
+      linksMenuLateral[index].classList.remove('border-2', 'border-[#121212]');
+      linksMenuLateral[index].classList.add('border-[1px]', 'border-[#e0e0e0]');
+    }
+  });
+
+  window.addEventListener('scroll', marcaQuestaoAtual);
+}
+marcaQuestaoAtual();
