@@ -121,3 +121,10 @@ function marcaQuestaoAtual() {
   window.addEventListener('scroll', marcaQuestaoAtual);
 }
 marcaQuestaoAtual();
+
+function totalQuestoes() {
+  const totalQuestoes = document.querySelectorAll('.questao').length;
+  const campoTotalQuestoes = document.querySelector('.total-questoes');
+  campoTotalQuestoes.innerText = totalQuestoes;
+}
+totalQuestoes();
