@@ -36,7 +36,6 @@ function questoesEmBranco() {
 questoesEmBranco();
 
 
-
 // Marca a alternativa selecionada
 function marcaAlternativa () {
   const alternativa = document.querySelectorAll('.alternativa');
@@ -133,9 +132,13 @@ navegaQuestoes();
 // Marcação da questão atual no menu lateral
 function marcaQuestaoAtual() {
   const secoesQuestoes = document.querySelectorAll('.questao');
+  const campoQuestaoAtual = document.querySelector('.questao-atual');
   const linksMenuLateral = document.querySelectorAll('a[href^="#"]');
   const classesAtivas = ['ring-2', 'ring-[#121212]'];
-  
+  const totalQuestoes = secoesQuestoes.length;
+
+  campoQuestaoAtual.innerText = 1; 
+
   secoesQuestoes.forEach((secao, index) => {
     const topoSecao = secao.getBoundingClientRect().top;
     const fundoSecao = secao.getBoundingClientRect().bottom;
@@ -146,14 +149,16 @@ function marcaQuestaoAtual() {
     const link = linksMenuLateral[index];
 
     if (secaoVisivel) {            
-      link.classList.add(...classesAtivas);      
+      link.classList.add(...classesAtivas);  
+      const numeroQuestaoAtual = index + 1;    
+      campoQuestaoAtual.innerText = numeroQuestaoAtual;  
     } else {
       link.classList.remove(...classesAtivas);
     }
   });
 
-  window.addEventListener('scroll', marcaQuestaoAtual);
 }
+window.addEventListener('scroll', marcaQuestaoAtual);
 marcaQuestaoAtual();
 
 function totalQuestoes() {
